@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>über mich</title>
+    <link rel="icon" href="assets/pictures/icon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="lebenslaufTXT">
+        Name: Sinan Zülfikar
+        Geburtsort: Istanbul
+        
+    </div>
+    <button id="downloadButton" onclick="donwload('lebenslauf.pdf')"> Lebenslauf Herunterladen</button>
+    <style>
+        #downloadButton {
+            background-color: rgb(253, 91, 79);
+            color: white;
+            font-size: 26px;
+            border-radius: 60px;
+            border: 0px;
+            padding: 10px 35px;
+            position: fixed;
+                margin-left: 1500px;
+                margin-top: 450px;
+        }
+    </style>
+    <script>    
+        function donwload(filename) {
+            const element = document.createElement('a');
+            element.setAttribute('href', 'assets/files/' + filename);
+            element.setAttribute('download', filename);
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>
